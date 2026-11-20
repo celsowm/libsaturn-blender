@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+/build/
+/dist/
+/assets/private/
+/assets/imported/
+*.blend1
+.env

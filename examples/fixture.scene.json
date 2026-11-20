@@ -1,0 +1,1 @@
+{"version":0,"units":"m","axes":"RH_Z_UP","entities":[{"id":"spawn","kind":"player_spawn","position":[0,0,0]},{"id":"anchor-01","kind":"camera_anchor","position":[-2,3,4]}]}
