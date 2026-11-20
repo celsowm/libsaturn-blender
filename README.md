@@ -1,21 +1,19 @@
 # LibSaturn Blender Toolkit
 
-A reusable, hardware-aware authoring pipeline for Sega Saturn games built with [LibSaturn](https://github.com/celsowm/libsaturn).
+Hardware-aware authoring for Sega Saturn games built with [LibSaturn](https://github.com/celsowm/libsaturn).
 
-**Status:** bootstrap; no production exporter or Blender integration qualified yet.
+**Status:** initial addon and headless authoring exporter; Blender/SDK runtime qualification pending. No production texture or HLOD adapter yet.
 
-## Quick start
-Run the standalone contract tests (Python 3.10+):
 ```sh
 python -m unittest discover -s tests
 python tools/validate_scene.py examples/fixture.scene.json
+python tools/package_addon.py
 ```
 
-The canonical build must work headlessly, without MCP. Use a sibling LibSaturn checkout or installed SDK. The Blender addon will author semantic scene metadata; existing LibSaturn converters remain responsible for hardware-ready payloads.
+Install the generated ZIP as a legacy addon, then open the 3D View > Sidebar > Saturn. Tag entities and mesh roles, export JSON plus separate render and collision OBJ. Headless export is independent of MCP. Use original or explicitly licensed assets.
 
+- [Blender workflow and MCP](docs/BLENDER.md)
 - [Architecture and roadmap](docs/ROADMAP.md)
 - [Scene contract v0](docs/SCENE_CONTRACT.md)
 - [Agent instructions](AGENTS.md)
 - [First consumer: Sonic X-treme: Lost Adventure](https://github.com/celsowm/sonic-xtreme-saturn)
-
-Only original or explicitly licensed fixtures belong in this repository. No commercial game assets, BIOS or ROM files.
